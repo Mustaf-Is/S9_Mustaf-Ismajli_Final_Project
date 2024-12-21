@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+::root{
+    --color-primary:#ff725e;
+    --color-secondary:#ffaa9e;
+    --txt-color:#263238;
+}
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+label {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.2;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+img,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: 'Assistant';
+    src: url('../assets/fonts/Assistant-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Assistant-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Batman';
+    src: url('../assets/fonts/batmfa__.woff2') format('woff2'),
+        url('../assets/fonts/batmfa__.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 48px;
+}
+.logo > h3{
+    margin: 0;
+    padding: 0 5px;
+    font-family: 'Batman';
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+}
+.logo h3 > span{
+    color: #263238;
+}
+.collapse ul{
+    color: #f5f5f5;
+    font-size: 1.2rem;
+}
+.collapse ul li{
+    padding:0 5px;
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.collapse ul li:hover{
+    background-color: #ffaa9e;
+    border-radius: 5px;
+}
