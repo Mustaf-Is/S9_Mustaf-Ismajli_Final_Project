@@ -4,13 +4,15 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="This ">
+     <meta name="description"
+          content="ProWeb is a web agency that offers web hosting, web design, responsive layouts, seo, and many more web services with the aim of making your business grow.">
      <meta name="keywords"
           content="Web Agency, web hosting, web design, responsive layouts, seo, JavaScript, bootstrap, css, html, costumer service">
-     <meta name="author" content="Mustaf Ismajli">
+     <meta name="author" content="Mustafë Ismajli">
+     <link rel="shortcut icon" href="./assets/svgs/icon-logo.svg" type="image/x-icon">
      <link rel="stylesheet" href="./css/bootstrap.css">
      <link rel="stylesheet" href="./css/style.css">
-     <title>Document</title>
+     <title>ProWeb: Web servics | Web hosting | Seo | Web design. Agency for business growth </title>
 </head>
 
 <body>
@@ -30,9 +32,6 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
                          <ul class="navbar-nav">
                               <li class="nav-item">
-                                   <a class="nav-link text-white" href="#home">Home</a>
-                              </li>
-                              <li class="nav-item">
                                    <a class="nav-link text-white" href="#about">About</a>
                               </li>
                               <li class="nav-item">
@@ -40,6 +39,9 @@
                               </li>
                               <li class="nav-item">
                                    <a class="nav-link text-white" href="#team">Team</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link text-white" href="#work">Our Work</a>
                               </li>
                               <li class="nav-item">
                                    <a class="nav-link text-white" href="#contact">Contact</a>
@@ -207,11 +209,37 @@
                </div>
           </div>
      </section>
+
+     <section id="work" class="ourwork">
+          <h2 class="tittle"> Our Work</h2>
+          <div class="cards-container">
+               <div class="card shadow ">
+                    <div class="project-thumbnail"><img src="./assets/images/illyrian.png" alt="project-thumbnail">
+                    </div>
+                    <div class="project-info">
+                         <h4>Illyrian Books</h4>
+                         <p>A modern online bookstore platform offering a seamless book shopping experience. Built with
+                              HTML5, CSS3, JavaScript and jQuery focusing on clean code and optimal performance.</p>
+                         <a href="https://illyrian-books.netlify.app/" target="_blank">View Project</a>
+                    </div>
+               </div>
+               <div class="card shadow ">
+                    <div class="project-thumbnail"><img src="./assets/images/yt-clone.png" alt="project-thumbnail">
+                    </div>
+                    <div class="project-info">
+                         <h4>YouTube Clone</h4>
+                         <p>A simple responsive clone of YouTube made with HTML and CSS for learning purposes.</p>
+                         <a href="https://mustaf-is.github.io/Youtube-clone/" target="_blank">View Project</a>
+                    </div>
+               </div>
+          </div>
+     </section>
+
      <section id="contact" class="contact">
           <h2 class="tittle">Contact Us</h2>
           <div class="row-wrapper">
                <div class="content">
-                    <form class="row g-3">
+                    <form class="row g-3" id="contact-form">
                          <div class="col-md-6">
                               <label for="inputFirstName" class="form-label">First name*</label>
                               <input type="text" class="form-control" id="inputFirstName" placeholder="John" required>
@@ -226,8 +254,8 @@
                                    required>
                          </div>
                          <div class="form-floating">
-                              <textarea class="form-control" placeholder="Topic about yout project"
-                                   id="floatingTextarea2" style="height: 100px" required></textarea>
+                              <textarea class="form-control" placeholder="Topic about yout project" id="inputMessage"
+                                   style="height: 100px" required></textarea>
                               <label for="floatingTextarea2">Tell us more about your project*</label>
                          </div>
                          <div class="col-12">
@@ -338,7 +366,18 @@
                </div>
           </div>
      </section>
+     <button id="scrollButton" class="scroll-top-btn">
+          <img src="./assets/svgs/up-arrow-svgrepo-com.svg" alt="arrow">
+     </button>
+     <footer>
+          <div class="footer-container">
+               <p>All rights reserved &copy; 2024</p>
+               <h3><span>Web</span>Pro</h3>
+          </div>
+     </footer>
+
      <script src="./js/bootstrap.bundle.js"></script>
+     <script src="./js/main.js"></script>
 </body>
 
 </html>
