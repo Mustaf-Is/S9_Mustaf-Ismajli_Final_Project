@@ -3,11 +3,13 @@
 *::after {
     box-sizing: border-box;
 }
-::root{
-    --color-primary:#ff725e;
-    --color-secondary:#ffaa9e;
-    --txt-color:#263238;
+
+::root {
+    --color-primary: #ff725e;
+    --color-secondary: #ffaa9e;
+    --txt-color: #263238;
 }
+
 * {
     margin: 0;
 }
@@ -15,6 +17,7 @@
 body {
     font-family: 'Assistant', sans-serif;
     line-height: 1.5;
+    color: #263238;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -76,6 +79,7 @@ svg {
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Batman';
     src: url('../assets/fonts/batmfa__.woff2') format('woff2'),
@@ -84,14 +88,16 @@ svg {
     font-style: normal;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
-.logo img{
+
+.logo img {
     width: 48px;
 }
-.logo > h3{
+
+.logo>h3 {
     margin: 0;
     padding: 0 5px;
     font-family: 'Batman';
@@ -99,19 +105,310 @@ svg {
     font-size: 1.5rem;
     color: #f5f5f5;
 }
-.logo h3 > span{
+
+.logo h3>span {
     color: #263238;
 }
-.collapse ul{
+
+.collapse ul {
     color: #f5f5f5;
     font-size: 1.2rem;
 }
-.collapse ul li{
-    padding:0 5px;
+
+.collapse ul li {
+    padding: 0 5px;
     transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 
-.collapse ul li:hover{
+.collapse ul li:hover {
     background-color: #ffaa9e;
     border-radius: 5px;
+}
+
+.home {
+    height: 90dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcb5ac;
+}
+
+.hero {
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+}
+
+.hero h1 {
+    font-size: clamp(1rem, 3.5vw + 0.25rem, 1.25rem);
+    text-transform: uppercase;
+}
+
+.hero p.intro {
+    font-size: clamp(1.5rem, 4vw + 0.5rem, 2.25rem);
+    font-weight: 600;
+    color: #263238;
+}
+
+.hero p {
+    font-size: clamp(1rem, 3.5vw + 0.25rem, 1.5rem);
+    font-weight: 500;
+}
+
+.hero .btn {
+    background-color: #f85e49;
+    color: #f5f5f5;
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+    font-weight: 500;
+    padding-right: 2.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .btn::after {
+    content: " →";
+    position: absolute;
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero .btn:hover::after {
+    transform: rotate(90deg);
+}
+
+.hero .btn:hover {
+    background-color: #263238;
+    color: #ff725e;
+    scale: 1.1;
+}
+
+.hidden {
+    display: none;
+}
+
+.img-wrapper>img {
+    width: 180px;
+}
+
+section {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .tittle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    padding: 5px;
+    border-bottom: solid 2px #ff725e;
+}
+
+section .row-wrapper {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: center;
+    margin: auto;
+}
+
+.row-wrapper .content {
+    flex: 1 1 60%;
+}
+
+.row-wrapper .content h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff725e;
+    padding: 1.5rem 0;
+}
+
+.row-wrapper .content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.row-wrapper .content .btn {
+    border: solid 2px #ff725e;
+    color: #f85e49;
+    ;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.row-wrapper .content .btn:hover {
+    background-color: #ff725e;
+    color: #f5f5f5;
+}
+
+section .row-wrapper .image {
+    flex: 1 1 40%;
+}
+
+section .row-wrapper img {
+    max-width: 100%;
+}
+
+.services .row-wrapper {
+    padding: 1rem;
+}
+
+.services .row-wrapper:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.team {
+    background-color: #f5f5f5;
+    padding-bottom: 2rem;
+}
+
+.team .cards-container {
+    width: 80%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.cards-container .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+}
+
+.cards-container .profile {
+    border: solid 4px #ff725e;
+    border-radius: 50%;
+    width: 128px;
+}
+
+.cards-container .profile img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.cards-container .member h4 {
+    font-weight: 600;
+}
+
+.cards-container .member p {
+    color: #ff725e;
+}
+
+.cards-container .social-networks {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cards-container .social-networks img {
+    width: 32px;
+    filter: invert(40%) brightness(50%) contrast(100%);
+    transition: filter 0.3s ease;
+}
+
+.cards-container .social-networks img:hover {
+    filter: invert(56%) sepia(44%) saturate(2163%) hue-rotate(327deg) brightness(101%) contrast(101%);
+}
+
+.contact .content {
+    flex: 1 1 50%;
+}
+
+.contact .row label {
+    font-size: 1.1rem;
+    color: #263238;
+}
+
+.contact .row input {
+    padding: 10px;
+    border: solid 1px #ffaa9e;
+}
+
+.contact .row textarea {
+    border: solid 1px #ffaa9e;
+}
+
+.form-control:focus {
+    border-color: #ff725e;
+    box-shadow: 0 0 0 0.25rem rgba(255, 114, 94, 0.25);
+}
+
+.contact .btn {
+    padding: 5px 25px;
+}
+
+.faq .row-wrapper {
+    flex-direction: row-reverse;
+}
+
+.faq .accordion-item {
+    border: solid 1px #263238;
+    border-bottom: none;
+    outline: none;
+}
+.faq .accordion-item:last-child {
+    border: solid 1px #263238;
+}
+
+.faq .accordion-header button {
+    background-color: #ffc7bf;
+    color: #263238;
+    font-size: 1.2rem;
+}
+
+.faq .accordion-header button:focus {
+    box-shadow:none;
+}
+.faq .accordion-header button:not(.collapsed) {
+    background-color: #e0e0e0;
+}
+
+.faq .accordion-header button::after{
+    content: '+';
+    background-image: none !important;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #f85e49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.faq .accordion-header button:not(.collapsed)::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.faq .accordion-body {
+    background-color: #f5f5f5;
+}
+
+@media (min-width: 768px) {
+
+    .team .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .cards-container .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .hidden {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
